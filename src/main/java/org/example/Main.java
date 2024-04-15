@@ -20,8 +20,7 @@ public class Main {
         Account customerAccount = new Account(customer, customerBank);
         Account sellerAccount = new Account(seller, sellerBank);
 
-        TransactionService transactionService = new TransactionService();
-        transactionService.startTransaction(customerAccount, sellerAccount,new Amount(100, Currency.INR), new Card());
+        customer.startTransaction(customerAccount, sellerAccount,new Amount(100, Currency.INR), new Card());
 
     }
 }
